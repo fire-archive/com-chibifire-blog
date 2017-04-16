@@ -1,0 +1,9 @@
+# Pirate Nomnoml 
+
+2007-08-30T11:18:49.0312500-07:00
+
+Nomnoml makes uml diagrams.
+
+```{r echo = FALSE}
+knitr::include_graphics(rep("Image/Pirate.nomnoml.svg"))
+```
