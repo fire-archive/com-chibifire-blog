@@ -12,3 +12,9 @@ github-repo: rstudio/bookdown-demo
 description: "This is Ernest 'iFire' Lee's Journal."
 ---
 
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
