@@ -13,7 +13,7 @@ cd Documentation
 rm -rf *
 touch .nojekyll
 cp -r ../_book/* ./
-mv bookdown-index.html to index.html
+mv bookdown-index.html index.html
 git add -A
 git commit -m"Update the book" || true
 git push -q origin gh-pages
