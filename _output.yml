@@ -1,6 +1,7 @@
 bookdown::html_book:
   theme: flatly
   css: toc.css
+  split_by: none
   config:
     toc:
       before: |
