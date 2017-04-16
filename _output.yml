@@ -1,15 +1,16 @@
-bookdown::gitbook:
+bookdown::html_book:
+  theme: flatly
   css: style.css
   config:
     toc:
       before: |
-        <li><a href="./">Ernest \'iFire\' Lee\'s Journal - Chibifire</a></li>
+        <li><a href="./">Ernest 'iFire' Lee's Journal - Chibifire</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/fire/com-chibifire-blog/edit/master/%s
     downoad: []
 #    download: ["pdf", "epub"]
-bookdown::tufte_html_book:
+bookdown::pdf_book:
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
