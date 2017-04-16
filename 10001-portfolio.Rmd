@@ -1,20 +1,20 @@
 # Portfolio
 
-Current Projects:
+## Current Projects:
 
-Squad - Offworld Industries:
+**Squad - Offworld Industries**:
 
 ![squad-front-cover](https://upload.wikimedia.org/wikipedia/en/d/de/Squad_(videogame)_2016_frontcover.png)
 
 Programmer
 
-Previous Projects:
+## Previous Projects:
 
-Heavy Gear Assault - Mektek Studos / Stompybot:
+### Heavy Gear Assault - Mektek Studos / Stompybot:
 
 Systems Professional
 
-Jam at iamagamer:
+### Jam at iamagamer:
 
 Penny Farthing
 by Team Penny
