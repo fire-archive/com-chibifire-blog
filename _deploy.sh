@@ -11,7 +11,8 @@ git config --global user.name "K. S. Ernest (iFire) Lee"
 git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git Documentation
 cd Documentation
 rm -rf *
+touch .nojekyll
 cp -r ../_book/* ./
-git add --all *
+git add -A
 git commit -m"Update the book" || true
 git push -q origin gh-pages
