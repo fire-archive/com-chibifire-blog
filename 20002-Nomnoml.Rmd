@@ -4,8 +4,10 @@
   Sunday, April 16, 2017 4:11:05 PM
 </time>
 
-Nomnoml makes uml diagrams.
+[Nomnoml][Nomnoml] makes uml diagrams.
 
 ```{r echo = FALSE}
 knitr::include_graphics(rep("Image/Pirate.nomnoml.svg"))
 ```
+
+[Nomnoml]: http://nomnoml.com "Nomnoml"
