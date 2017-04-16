@@ -10,6 +10,7 @@ git config --global user.name "K. S. Ernest (iFire) Lee"
 
 git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git Documentation
 cd Documentation
+rm -rf *
 cp -r ../_book/* ./
 git add --all *
 git commit -m"Update the book" || true
