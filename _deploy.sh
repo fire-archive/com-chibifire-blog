@@ -8,7 +8,7 @@ set -e
 git config --global user.email "ernest.lee@chibifire.com"
 git config --global user.name "K. S. Ernest (iFire) Lee"
 
-git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git book-output
+git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git Documentation
 cd Documentation
 cp -r ../_book/* ./
 git add --all *
