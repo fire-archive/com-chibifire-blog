@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Ernest iFire Lee’s Journal - Chibifire" />
+<meta property="og:type" content="book" />
+
+
+<meta property="og:description" content="This is Ernest ‘iFire’ Lee’s Journal." />
+<meta name="github-repo" content="rstudio/bookdown-demo" />
+
+<meta name="author" content="K. S. Ernest (iFire) Lee" />
+
+<meta name="date" content="2017-04-16" />
+
+
+<meta name="description" content="This is Ernest ‘iFire’ Lee’s Journal.">
+
+<title>Ernest iFire Lee’s Journal - Chibifire</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#intro"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="2-portfolio.html#portfolio"><span class="toc-section-number">2</span> Portfolio</a></li>
+<li class="has-sub"><a href="3-physics-in-super-jet-racing-29-june-2015.html#physics-in-super-jet-racing---29-june-2015"><span class="toc-section-number">3</span> Physics in Super Jet Racing - 29 June 2015</a><ul>
+<li class="has-sub"><a href="3-1-additional-notes.html#additional-notes"><span class="toc-section-number">3.1</span> Additional Notes</a><ul>
+<li><a href="3-1-additional-notes.html#grid-system"><span class="toc-section-number">3.1.1</span> Grid System</a></li>
+</ul></li>
+</ul></li>
+<li><a href="references.html#references">References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="additional-notes" class="section level2">
+<h2><span class="header-section-number">3.1</span> Additional Notes</h2>
+<p>Recently Devlin noticed the car’s turning looks too “tight”, that it does not drift enough. I had already allowed the car to drift in theory.</p>
+<p>Every frame, car’s sideways velocity is measured and friction is applied to it. If the velocity is small, it will be set to zero, otherwise it will decrease linearly from the friction. The friction was changed so that the threshold for setting the sideways velocity to zero is higher than the amount by which the velocity linearly decreases.</p>
+<p>This should simulate a car’s tires having high static friction but low kinetic friction. (Even though it’s a hovercraft). During a normal turn, the car will grip the road, but if the centrifugal force of the turn becomes too high, the grip will suddenly break and the car will drift. There needs to have some different kinds of curves in the track to test whether this feels right.</p>
+<p>For the car to drive up walls, its rotation needs to be changed so the Z vector of the car matches the normal of the wall. As part of the collision detection, a list of normals is created of any walls or floors (the engine doesn’t differentiate them) that the car is touching. The game chooses the normal closest to the car’s previous Z vector and assumes that the car should drive along that surface. Afterwards, the game interpolates the car’s quaternion so that the car will gradually rotate to drive along the wall / floor.</p>
+<p>As a result of this, the car pitches back when it drives off of a ramp. If the car jumps off a ramp and turn 90 degrees left or right, the car will be turning within the plane of the ramp, and the camera will show the world tilted slightly sideways as the car drifts through the air.</p>
+<p>The car is modelled as a sphere of diameter 5 meters. Maybe this is the right ballpark for a racing hovercar, because Formula One cars are 5 meters long. To make sure that the car wouldn’t tunnel through anything, I went to Wikipedia and measured the speed / body length ratios of Formula One cars and SR-71s.</p>
+<p>I don’t remember the exact numbers, but in 1 / 120th of a second, an F1 car only moves roughly 80 cm. An SR-71 moves a number of meters, but SR-71s are also 107 feet long.</p>
+<p>In Super Jet Racing, the car peaks around 3 meters per frame, which I think is 1200 scale kilometers per hour. I might need to change the graphics to make it feel faster.</p>
+<div id="grid-system" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Grid System</h3>
+<p>To accomodate large tracks, I use a 3D grid. When the track is loaded, the game iterates over every triangle, placing it into grid buckets based on its AABB. When the game is running, it uses the same function to place the car into grid buckets. Then for collision detection, it only considers triangles within the car’s grid buckets.</p>
+<p>The current track has about 1,400 triangles so it is useless to check triangles that are nowhere near the player.</p>
+<p>A benchmark was setup that spawns the car, then idles for 100,000 physics frames.</p>
+<p>Grid on: - 18.7 seconds - less than 0.2 milliseconds per physics frame, including the time needed to set up the grid.</p>
+<p>Grid off: - 2 minutes and 43 seconds: - 1.63 milliseconds per frame.</p>
+<p>Right now the game is not hurting for milliseconds, but on a weaker CPU, or on a bigger track, or with multiple players, the grid will be a necessity.</p>
+
+</div>
+</div>
+<!-- </div> -->
+<p style="text-align: center;">
+<a href="3-physics-in-super-jet-racing-29-june-2015.html"><button class="btn btn-default">Previous</button></a>
+<a href="references.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

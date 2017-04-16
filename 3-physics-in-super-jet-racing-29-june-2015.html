@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Ernest iFire Lee’s Journal - Chibifire" />
+<meta property="og:type" content="book" />
+
+
+<meta property="og:description" content="This is Ernest ‘iFire’ Lee’s Journal." />
+<meta name="github-repo" content="rstudio/bookdown-demo" />
+
+<meta name="author" content="K. S. Ernest (iFire) Lee" />
+
+<meta name="date" content="2017-04-16" />
+
+
+<meta name="description" content="This is Ernest ‘iFire’ Lee’s Journal.">
+
+<title>Ernest iFire Lee’s Journal - Chibifire</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#intro"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="2-portfolio.html#portfolio"><span class="toc-section-number">2</span> Portfolio</a></li>
+<li class="has-sub"><a href="3-physics-in-super-jet-racing-29-june-2015.html#physics-in-super-jet-racing---29-june-2015"><span class="toc-section-number">3</span> Physics in Super Jet Racing - 29 June 2015</a><ul>
+<li class="has-sub"><a href="3-1-additional-notes.html#additional-notes"><span class="toc-section-number">3.1</span> Additional Notes</a><ul>
+<li><a href="3-1-additional-notes.html#grid-system"><span class="toc-section-number">3.1.1</span> Grid System</a></li>
+</ul></li>
+</ul></li>
+<li><a href="references.html#references">References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="physics-in-super-jet-racing---29-june-2015" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Physics in Super Jet Racing - 29 June 2015</h1>
+<p><em>This is a guest article from ReactorScram.</em></p>
+<p>I’m ReactorScram, I’ve been doing Ludum Dare since April 2013. This game is a followup to my LD27 entry, “Jet Racing”. People complained it was too 2D so I made 3D physics for this “Super Jet Racing”.</p>
+<p>In my game, you race a hovercar. Originally I wanted to make a game like F-Zero where the car sticks to the track and is able to hang upside-down. I could still do this, but it seemed making a big F-Zero track would be time-consuming and hard to test.</p>
+<p>The level is only about half-done, but I imagine it existing inside a stadium, like they race monster trucks in. There’s concrete barriers marking the edges of the track, and right before the start / finish line is a one-kilometer wall, angled at 85 degrees, with a checkpoint at the top. The car has a high thrust-weight ratio, and the player is expected to drive straight up the wall, pass the checkpoint, and fall back down.</p>
+<p>As my physics method in my custom engine, I used discrete collision detection and explicit Euler integration. Discrete collision detection means I was too lazy to do continuous collision.</p>
+<p>Every frame I check whether the car is inside a triangle, then I push it out. I do this up to 20 times, in case the car is in multiple triangles.</p>
+<p>Apparently, you must use an epsilon for this, otherwise the car may keep pushing itself out of a triangle that it’s not really in. That one triangle would eat up all the collision resolve steps and leave nothing for the other triangles. During testing, this manifested as: running into a wall and the car would fall through the ground.</p>
+<p>When I push the car out of a triangle, I also zero its velocity along the normal of the triangle to simulate an inelastic collision.</p>
+<p>There wasn’t any issues with penetration other than falling through the ground.</p>
+<p>Near the beginning, I had implemented the AABB check before the triangle check, so briefly the car was not colliding with inclined planes properly.</p>
+<p>I didn’t encounter problems with the car rocketing into the air. Even though I’m using explicit Euler, the simulation is very simple and it doesn’t seem to explode. I’m also doing physics at 120 FPS so tunneling has not been an issue. Once I saw it seem to teleport, but it hasn’t happened since then. I don’t know what it was.</p>
+<p>It helps that the track doesn’t have any sharp edges where the car might get caught. There’s also no other moving objects than the car, although I’d like to add enemy cars, ghost cars or multiplayer someday.</p>
+<p>My method is notable because it was hand-written in Lua over the course of a few days.</p>
+<p>Cowritten by Ernest ‘iFire’ Lee</p> 
+</div>
+<p style="text-align: center;">
+<a href="2-portfolio.html"><button class="btn btn-default">Previous</button></a>
+<a href="3-1-additional-notes.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>
