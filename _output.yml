@@ -12,7 +12,7 @@ bookdown::html_book:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/fire/com-chibifire-blog/edit/master/%s
-    downoad: ["epub"]
+    download: ["epub"]
 #    download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
