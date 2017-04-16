@@ -1,5 +1,5 @@
 bookdown::html_book:
-  theme: null
+  theme: flatly
   css: toc.css
   config:
     toc:
