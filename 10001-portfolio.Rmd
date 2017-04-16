@@ -14,6 +14,10 @@ Programmer
 
 ### Heavy Gear Assault - Mektek Studos / Stompybot:
 
+```{r echo = FALSE}
+knitr::include_graphics(rep("Image/HeavyGearAssaultPromoImage.jpg"))
+```
+
 Systems Professional
 
 ### Jam at iamagamer:
