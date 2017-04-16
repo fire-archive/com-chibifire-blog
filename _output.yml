@@ -9,7 +9,7 @@ bookdown::gitbook:
     edit: https://github.com/fire/com-chibifire-blog/edit/master/%s
     downoad: []
 #    download: ["pdf", "epub"]
-bookdown::pdf_book:
+bookdown::tufte_html_book:
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
