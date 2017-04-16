@@ -4,7 +4,7 @@
 
 This is a rmarkdown site for https://chibifire.com.
 
-```
+```bash
 # assume you have initialized the git repository,
 # and are under the directory of the book repository now
 
@@ -20,7 +20,7 @@ git commit -m"Initial commit"
 git push origin gh-pages
 ```
 
-```
+```bash
 gem install travis
 # Generate your token
 # Give it repo permissions
