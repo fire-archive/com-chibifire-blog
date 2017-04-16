@@ -1,6 +1,6 @@
 language: r
 cache: packages
-sudo: required
+sudo: false
 cache:
   packages: yes
   directories:
@@ -9,7 +9,6 @@ env:
   global:
   - secure: eDwf2qrg8bCQbTeUQIsTkM1Haq9Oy02WgufD1Tzpnha7cBUMSNqyKmNtakCM1uIO6b2lupdxk1A0/aeqdNaN04aYdMwE4Dzy/xiYUedHKwxBEfDN1Vfy/zDQi4MTIMeGMIlSa8FBaBNMiO4OL96HJU0N/GmP5gYZJoXUQnZ0gqYKuqK7lCWlIZAmiD2v9aZp8zec1EMxKyO97s9DceKN8OOwvQcqgUvCBg3XyfmoREpOGaSAHRIHGezJoKZSn8Arj2v7szqRMWaBTk9JaWv2eKzmDabg+AWUHp7buMsPx2KoHCih2RR1KuE0d1lwq9sXjHcDLCMIFqjIJ5t+gIBDVnUyQ0Zg/kDZNu6b2v3XD/XVk7RTuGZOgra8tbqCCBdUGnsAl96Fv7Z64sge/ZD0Q0832LCgOjr4GT238KWsZHR75nVwEjIlN7lPTYNFSzDdBW2ipGeQyaurpUmWoCueaE8ft9h17XV4dvx/0ApbKGKJHhKiYcQQCTUbCDHiAJ1a0WmLM0MCajZEakcOIVYiO0LhGBIXhIaYpjbdVyIkh41hJ/B0wLETRTV5gqgOpH8c0RfoQUpfkuzFY4RskGhkwukOR7n5Ciw/iJVh4yCRaYmgOTh5Jr/sGujLdjbjYioCHWUbMQa/++4A/No/FDcENC/JZRbX9j9KbeHgFCOGask=
 before_script:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
 - chmod +x ./_build.sh
 - chmod +x ./_deploy.sh
 script:
