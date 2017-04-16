@@ -4,7 +4,9 @@
 
 **Squad - Offworld Industries**:
 
-![squad-front-cover](https://upload.wikimedia.org/wikipedia/en/d/de/Squad_(videogame)_2016_frontcover.png)
+```{r echo = FALSE}
+knitr::include_graphics(rep("Image/Squad_(videogame)_2016_frontcover.png"))
+```
 
 Programmer
 
