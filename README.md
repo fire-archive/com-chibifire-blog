@@ -1,8 +1,8 @@
 # Chibifire.com's Blog
 
-## Install
-
 This is a rmarkdown site for https://chibifire.com.
+
+## Install
 
 ```bash
 # assume you have initialized the git repository,
