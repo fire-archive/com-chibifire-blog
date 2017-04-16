@@ -1,6 +1,8 @@
 # Pirate Nomnoml 
 
-2007-08-30T11:18:49.0312500-07:00
+<time datetime="2017-04-16 16:10:44 -0700">
+  Sunday, April 16, 2017 4:11:05 PM
+</time>
 
 Nomnoml makes uml diagrams.
 
