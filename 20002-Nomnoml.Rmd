@@ -7,7 +7,7 @@
 [Nomnoml][Nomnoml] makes uml diagrams.
 
 ```{r echo = FALSE}
-knitr::include_graphics(rep("Image/Pirate.nomnoml.svg"))
+knitr::include_graphics("Image/Pirate.nomnoml.png")
 ```
 
 [Nomnoml]: http://nomnoml.com "Nomnoml"
