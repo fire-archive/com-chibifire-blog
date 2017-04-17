@@ -27,3 +27,10 @@ gem install travis
 # Replace your_token with the token
 TOKEN=your_token travis encrypt GITHUB_PAT=$TOKEN
 ```
+
+```bash
+# Install nodejs
+# Install nomnoml
+npm install -g nomnoml
+nomnoml Image/Pirate.nomnoml > Image/Pirate.nomnoml.svg
+```
