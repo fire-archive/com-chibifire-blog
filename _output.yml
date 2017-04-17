@@ -7,7 +7,7 @@ bookdown::gitbook:
       before: |
         <li><a href="./">Ernest 'iFire' Lee's Journal - Chibifire</a></li>
     edit: https://github.com/fire/com-chibifire-blog/edit/master/%s
-    download: ["epub"]
+    download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
