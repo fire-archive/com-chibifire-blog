@@ -5,7 +5,7 @@
 **Squad - Offworld Industries**:
 
 ```{r echo = FALSE}
-knitr::include_graphics(rep("Image/Squad_(videogame)_2016_frontcover.png"))
+knitr::include_graphics("Image/Squad_(videogame)_2016_frontcover.png")
 ```
 
 Programmer
@@ -15,7 +15,7 @@ Programmer
 ### Heavy Gear Assault - Mektek Studos / Stompybot:
 
 ```{r echo = FALSE}
-knitr::include_graphics(rep("Image/HeavyGearAssaultPromoImage.jpg"))
+knitr::include_graphics("Image/HeavyGearAssaultPromoImage.jpg")
 ```
 
 Systems Professional
