@@ -12,10 +12,6 @@ github-repo: rstudio/bookdown-demo
 description: "This is Ernest 'iFire' Lee's Journal."
 ---
 
-# Introduction {#intro}
-
-This is chibifire.com where I post my research notes.
-
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
