@@ -12,9 +12,17 @@ github-repo: rstudio/bookdown-demo
 description: "This is Ernest 'iFire' Lee's Journal."
 ---
 
-# Introduction {#intro}
+# Blog {#intro}
 
 This is chibifire.com where I post my research notes.
+
+## Godot
+
+<time datetime="2017-08-13T16:26:52+00:00">
+  Sun, 13 Aug 2017 16:26:52 +0000
+</time>
+
+I have been investigating godot. It's a 3d game engine that has support for physically based rendering.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
