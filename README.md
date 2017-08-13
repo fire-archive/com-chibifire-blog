@@ -1,6 +1,6 @@
 # Chibifire.com's Blog
 
-This is a rmarkdown site for https://chibifire.com.
+This is a rmarkdown site for http://chibifire.com.
 
 ## Install
 
