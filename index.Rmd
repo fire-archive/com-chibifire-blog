@@ -16,6 +16,24 @@ description: "This is Ernest 'iFire' Lee's Journal."
 
 This is chibifire.com where I post my research notes.
 
+## Godot art pipeline investigations #1
+
+<time datetime="2017-12-03T18:22:51+00:00">
+  Sunday, December 3, 2017 10:25:36 AM
+</time>
+
+Asked in the Godot discord about how people were doing the Godot 3.0 3d art import workflow.
+
+I was trying to import assets from sketchfab (gltf2 format) and a lot of the work was fixing textures - material mappings
+
+Steps:
+
+* Disable ect2 compression in Godot 3 Editor.
+* Convert from FBX using 
+https://github.com/pissang/qtek-model-viewer - 3D model viewer with high quality rendering
+* Import gltf2
+* Fix material mapping
+
 ## Godot
 
 <time datetime="2017-08-13T16:26:52+00:00">
