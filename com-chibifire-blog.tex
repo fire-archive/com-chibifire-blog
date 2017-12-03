@@ -73,7 +73,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-08-13}
+  \date{2017-12-03}
 
 
 % Redefines (sub)paragraphs to behave more like sections
@@ -105,6 +105,33 @@
 \chapter{Blog}\label{intro}
 
 This is chibifire.com where I post my research notes.
+
+\section{Godot art pipeline investigations
+\#1}\label{godot-art-pipeline-investigations-1}
+
+ Sunday, December 3, 2017 10:25:36 AM
+
+Asked in the Godot discord about how people were doing the Godot 3.0 3d
+art import workflow.
+
+I was trying to import assets from sketchfab (gltf2 format) and a lot of
+the work was fixing textures - material mappings
+
+Steps:
+
+\begin{itemize}
+\tightlist
+\item
+  Disable ect2 compression in Godot 3 Editor.
+\item
+  Convert from FBX using
+  \url{https://github.com/pissang/qtek-model-viewer} - 3D model viewer
+  with high quality rendering
+\item
+  Import gltf2
+\item
+  Fix material mapping
+\end{itemize}
 
 \section{Godot}\label{godot}
 
@@ -281,6 +308,6 @@ Michelle Clough Michelle Buch Nick Irvine Shih Oon Liong Ernest Lee
 
 \url{http://jam.iamagamer.ca/submissions/80-penny-farthing}
 
-\bibliography{packages.bib,book.bib}
+\bibliography{book.bib,packages.bib}
 
 \end{document}

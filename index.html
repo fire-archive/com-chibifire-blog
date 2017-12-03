@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Ernest iFire Lee’s Journal - Chibifire</title>
   <meta name="description" content="This is Ernest ‘iFire’ Lee’s Journal.">
-  <meta name="generator" content="bookdown 0.4.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5.10 and GitBook 2.6.7">
 
   <meta property="og:title" content="Ernest iFire Lee’s Journal - Chibifire" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="K. S. Ernest (iFire) Lee">
 
 
-<meta name="date" content="2017-08-13">
+<meta name="date" content="2017-12-03">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -77,7 +77,8 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Blog</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#godot"><i class="fa fa-check"></i><b>1.1</b> Godot</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#godot-art-pipeline-investigations-1"><i class="fa fa-check"></i><b>1.1</b> Godot art pipeline investigations #1</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#godot"><i class="fa fa-check"></i><b>1.2</b> Godot</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="physics-in-super-jet-racing-29-june-2015.html"><a href="physics-in-super-jet-racing-29-june-2015.html"><i class="fa fa-check"></i><b>2</b> Physics in Super Jet Racing - 29 June 2015</a><ul>
 <li class="chapter" data-level="2.1" data-path="physics-in-super-jet-racing-29-june-2015.html"><a href="physics-in-super-jet-racing-29-june-2015.html#additional-notes"><i class="fa fa-check"></i><b>2.1</b> Additional Notes</a><ul>
@@ -113,13 +114,26 @@
 <div id="header">
 <h1 class="title">Ernest ‘iFire’ Lee’s Journal - Chibifire</h1>
 <h4 class="author"><em>K. S. Ernest (iFire) Lee</em></h4>
-<h4 class="date"><em>2017-08-13</em></h4>
+<h4 class="date"><em>2017-12-03</em></h4>
 </div>
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Blog</h1>
 <p>This is chibifire.com where I post my research notes.</p>
+<div id="godot-art-pipeline-investigations-1" class="section level2">
+<h2><span class="header-section-number">1.1</span> Godot art pipeline investigations #1</h2>
+<p><time datetime="2017-12-03T18:22:51+00:00"> Sunday, December 3, 2017 10:25:36 AM </time></p>
+<p>Asked in the Godot discord about how people were doing the Godot 3.0 3d art import workflow.</p>
+<p>I was trying to import assets from sketchfab (gltf2 format) and a lot of the work was fixing textures - material mappings</p>
+<p>Steps:</p>
+<ul>
+<li>Disable ect2 compression in Godot 3 Editor.</li>
+<li>Convert from FBX using <a href="https://github.com/pissang/qtek-model-viewer" class="uri">https://github.com/pissang/qtek-model-viewer</a> - 3D model viewer with high quality rendering</li>
+<li>Import gltf2</li>
+<li>Fix material mapping</li>
+</ul>
+</div>
 <div id="godot" class="section level2">
-<h2><span class="header-section-number">1.1</span> Godot</h2>
+<h2><span class="header-section-number">1.2</span> Godot</h2>
 <p><time datetime="2017-08-13T16:26:52+00:00"> Sun, 13 Aug 2017 16:26:52 +0000 </time></p>
 <p>I have been investigating godot. It’s a 3d game engine that has support for physically based rendering.</p>
 
