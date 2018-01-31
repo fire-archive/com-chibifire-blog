@@ -1,7 +1,7 @@
-bookdown::html_book:
+bookdown::gitbook:
   includes:
       in_header: google-ga.html
-  theme: cerulean
+  css: style.css
   config:
     toc:
       before: |
