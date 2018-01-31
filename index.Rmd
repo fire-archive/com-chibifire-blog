@@ -3,7 +3,10 @@ title: "Ernest 'iFire' Lee's Journal - Chibifire"
 author: "K. S. Ernest (iFire) Lee"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output:
+  bookdown::html_book:
+    toc: yes
+    css: toc.css
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -12,11 +15,7 @@ github-repo: rstudio/bookdown-demo
 description: "This is Ernest 'iFire' Lee's Journal."
 ---
 
-# Blog {#intro}
-
-This is chibifire.com where I post my research notes.
-
-## Godot art pipeline investigations #1
+# Godot art pipeline investigations #1
 
 <time datetime="2017-12-03T18:22:51+00:00">
   Sunday, December 3, 2017 10:25:36 AM
@@ -29,12 +28,12 @@ I was trying to import assets from sketchfab (gltf2 format) and a lot of the wor
 Steps:
 
 * Disable ect2 compression in Godot 3 Editor.
-* Convert from FBX using 
+* Convert from FBX using
 https://github.com/pissang/qtek-model-viewer - 3D model viewer with high quality rendering
 * Import gltf2
 * Fix material mapping
 
-## Godot
+# Godot
 
 <time datetime="2017-08-13T16:26:52+00:00">
   Sun, 13 Aug 2017 16:26:52 +0000
